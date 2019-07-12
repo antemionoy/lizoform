@@ -97,13 +97,13 @@ function zoomPopUp(item) {
 }
 
 
-$('.partners__slider').owlCarousel({
+$('.certificates__slider').owlCarousel({
     loop: false,
     margin: 10,
     nav: true,
     dots: false,
     slideBy: 1,
-    items: 5,
+    items: 4,
     center: false,
     responsiveClass: true,
     navContainer: ".slider__nav",
@@ -131,7 +131,7 @@ $('.partners__slider').owlCarousel({
         },
 
         1320: {
-            items: 5,
+            items: 4,
             dots: false
         }
     }
@@ -145,7 +145,7 @@ $('.promo__slider').owlCarousel({
     dotsContainer: ".promo__dots",
     slideBy: 1,
     items: 1,
-    autoplay: true,
+    autoplay: false,
     autoplayTimeout: 5000,
     center: false,
     responsiveClass: true,

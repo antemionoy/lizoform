@@ -1,0 +1,60 @@
+//= template/header.html
+<main class="main">
+    <div class="container">
+        <ul class="breadcrumbs d-flex">
+            <li class="breadcrumbs__item">
+                <a href="#" class="breadcrumbs__link">Главная</a>
+            </li>
+            <li class="breadcrumbs__item">
+                <a href="#" class="breadcrumbs__link">Каталог</a>
+            </li>
+            <li class="breadcrumbs__item">
+                Карта товара
+            </li>
+        </ul>
+    </div>
+    <section class="card">
+    	<div class="container card__container">
+    		<h1 class="card__title title title_center title_h1">Названия товара</h1>
+    		<div class="card__grid d-flex">
+    			<div class="card__carousel"></div>
+    			<div class="card__info">
+    				<h3></h3>
+    			</div>
+    		</div>
+    	</div>
+    </section>
+   <section class="callback">
+        <div class="container callback__container">
+            <div class="callback__inner">
+                <h2 class="callback__title title title_h2">У вас есть вопросы?</h2>
+                <p class="callback__text">Заполните форму и напишите свой вопрос. Наши <br>
+                    специалисты свяжутся с вами</p>
+                <form action="#" class="callback__form form">
+                    <div class="form__grid wrap row d-flex">
+                        <div class="form__group col">
+                            <input type="text" class="form__element form__input" placeholder="Ваше имя">
+                        </div>
+                        <div class="form__group col">
+                            <input type="text" class="form__element form__input" placeholder="Ваш номер">
+                        </div>
+                        <div class="form__group col">
+                            <input type="text" class="form__element form__input" placeholder="Ваш e-mail">
+                        </div>
+                        <div class="form__group col">
+                            <select type="text" class="form__element form__select">
+                            	<option value="1">1</option>
+                            	<option value="2">2</option>
+                            </select>
+                        </div>
+                        <div class="form__group form__group_large col ">
+                            <textarea type="text" class="form__element form__textarea" placeholder="Ваш комментарий"></textarea>
+                        </div>
+                    </div>
+                    <button type="submit" class="callback__btn btn">Отправить</button>
+                </form>
+            </div>
+        </div>
+    </section>
+</main>
+//= template/footer.html
