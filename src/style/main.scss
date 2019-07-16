@@ -211,14 +211,14 @@ textarea {
     font-weight: 400;
     font-family: $font-roboto;
 
-    &__item{
+    &__item {
         color: $color-main;
 
-        &:first-child{
+        &:first-child {
             text-transform: uppercase;
         }
 
-        &:after{
+        &:after {
             content: '';
             display: inline-block;
             background-image: url(../img/breadcrumbs__arrow.png);
@@ -231,12 +231,12 @@ textarea {
         }
     }
 
-    &__link:hover{
+    &__link:hover {
         color: $color-main;
     }
 }
 
-.breadcrumbs__item:last-child:after{
+.breadcrumbs__item:last-child:after {
     display: none;
 }
 
@@ -314,6 +314,11 @@ h3 {
 
     &__col {
         align-items: center;
+    }
+
+    &__callback{
+        border: 2px solid $color-main;
+        font-size: 14px;
     }
 }
 
@@ -435,6 +440,8 @@ h3 {
         border-radius: 50%;
         border: 1px solid $color-main;
         margin: 0 auto;
+        align-items: center;
+        justify-content: center;
     }
 
     &__text {
@@ -538,7 +545,7 @@ h3 {
     background-position: center center;
     background-size: cover;
 
-    &_back-image{
+    &_back-image {
         background-image: url(../img/callback-back.jpg);
     }
 
@@ -692,7 +699,7 @@ h3 {
         padding-right: 10px;
     }
 
-    &__grid{
+    &__grid {
         margin: 54px -10px 0px;
     }
 
@@ -705,7 +712,7 @@ h3 {
         padding: 47px 16px 20px;
     }
 
-    &__circle{
+    &__circle {
         width: 80px;
         height: 80px;
         background-color: $color-main;
@@ -714,7 +721,7 @@ h3 {
         justify-content: center;
     }
 
-    &__name{
+    &__name {
         font-size: rem(16px);
         color: #333333;
         text-align: center;
@@ -723,7 +730,7 @@ h3 {
         font-weight: 700;
     }
 
-    &__content{
+    &__content {
         margin: 24px 0px 0px;
         text-align: center;
         margin-bottom: 0;
@@ -733,24 +740,155 @@ h3 {
     }
 }
 
-.card{
+.card {
     background-color: #fafafa;
 
-    &__container{
+    &__container {
         width: 1100px;
         padding-left: 15px;
         padding-right: 15px;
         background-color: #fff;
     }
 
-    &__title{
+    &__title {
         color: $color-main;
+    }
+}
+
+.catalog {
+    background-color: #f9f9f9;
+    padding: 60px 0px 60px;
+
+    &__title {
+        color: $color-main;
+    }
+
+    &__grid {
+        margin-top: 45px;
+        margin-left: -10px;
+        margin-right: -10px;
+    }
+
+    &__col {
+        padding-left: 10px;
+        padding-right: 10px;
+        margin-bottom: 20px;
+    }
+
+    &__item {
+        background-color: #fff;
+        box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.05);
+        border-radius: 3px;
+        min-height: 114px;
+        padding: 10px 15px 10px 25px;
+        align-items: center;
+    }
+
+    &__square {
+        width: 60px;
+        height: 60px;
+        min-width: 60px;
+        border: 1px solid $color-main;
+        margin-right: 15px;
+    }
+
+    &__name {
+        color: #333333;
+        font-size: rem(16px);
+        letter-spacing: -0.017em;
+        font-family: $font-roboto;
+        font-weight: 700;
     }
 }
 
 
 .footer {
-    padding: 33px 0px 40px;
-    min-height: 273px;
+    padding: 33px 0px 30px;
     background-color: #3e3e3e;
+    color: #fff;
+    font-size: rem(14px);
+
+    &__grid {
+        margin-left: -10px;
+        margin-right: -10px;
+    }
+
+    &__copyright {
+        margin-top: auto;
+        margin-bottom: 0px;
+        font-size: rem(14px);
+        opacity: 0.50;
+    }
+
+    &__col {
+        position: relative; 
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    &__title {
+        margin-top: 0px;
+        font-size: 14px;
+        text-transform: uppercase;
+        font-family: $font-roboto;
+    }
+
+    &__inner {
+        flex-direction: column;
+        padding-left: 20px;
+        height: inherit;
+    }
+
+    &__list{
+        margin-left: 20px;
+    }
+
+    &__right{
+        flex-direction: column;
+    }
+
+    &__number{
+        color: $color-main;
+        font-weight: 700;
+    }
+
+    &__mail{
+        color: #fff;
+        opacity: .50;
+    }
+
+    &__text{
+        line-height: 15px;
+        opacity: .50;
+    }
+
+}
+
+.footer__menu .menu__item{
+    font-size: 14px;
+    font-family: $font-myrad;
+}
+
+.footer__menu .menu__link{
+    color: #fff;
+    opacity: 0.50;
+    text-transform: uppercase;
+}
+
+.footer__col:first-child:before{
+    display: none;
+}
+
+.footer__col:first-child .footer__inner{
+    padding-left: 0;
+}
+
+.footer__col:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    height: 100%;
+    width: 1px;
+    background-color: #787878;
 }
