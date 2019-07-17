@@ -45,8 +45,8 @@
                     </nav>
                     <div class="header__col d-flex">
                         <div class="header__contacts d-flex">
-                            <a href="#" class="header__number number">8-812-347-71-15</a>
-                            <a href="#" class="header__mail mail">inform@lysoform.ru</a>
+                            <a href="#" class="header__number number number_icon-green">8-812-347-71-15</a>
+                            <a href="#" class="header__mail mail mail_icon-green">inform@lysoform.ru</a>
                         </div>
                         <a href="#" class="header__callback">Обратный звонок</a>
                     </div>
@@ -71,52 +71,121 @@
         <div class="container catalog__container">
             <h1 class="catalog__title title title_h1">Каталог</h1>
             <div class="catalog__grid wrap d-flex">
-                <div class="catalog__col col col-4">
+                <a href="#" class="catalog__col col col-4" data-category="catagory__one">
                     <div class="catalog__item d-flex">
-                        <div class="catalog__square">
-                            <img src="#" alt="" class="catalog__icon">
+                        <div class="catalog__square d-flex">
+                            <img src="img/catalog-icon_1.png" alt="" class="catalog__icon">
                         </div>
                         <div class="catalog__name">Средства дезинфекции и гигиены</div>
                     </div>
-                </div>
-                <div class="catalog__col col col-4">
+                </a>
+                <a href="#" class="catalog__col col col-4" data-category="catagory__two">
                     <div class="catalog__item d-flex">
-                        <div class="catalog__square">
-                            <img src="#" alt="" class="catalog__icon">
+                        <div class="catalog__square d-flex">
+                            <img src="img/catalog-icon_2.png" alt="" class="catalog__icon">
                         </div>
                         <div class="catalog__name">Средства дезинфекции и гигиены</div>
                     </div>
-                </div>
-                <div class="catalog__col col col-4">
+                </a>
+                <a href="#" class="catalog__col col col-4" data-category="catagory__three">
                     <div class="catalog__item d-flex">
-                        <div class="catalog__square">
-                            <img src="#" alt="" class="catalog__icon">
+                        <div class="catalog__square d-flex">
+                            <img src="img/catalog-icon_3.png" alt="" class="catalog__icon">
                         </div>
                         <div class="catalog__name">Средства дезинфекции и гигиены</div>
                     </div>
-                </div>
-                <div class="catalog__col col col-4">
+                </a>
+                <a href="#" class="catalog__col col col-4" data-category="catagory__four">
                     <div class="catalog__item d-flex">
-                        <div class="catalog__square">
-                            <img src="#" alt="" class="catalog__icon">
+                        <div class="catalog__square d-flex">
+                            <img src="img/catalog-icon_4.png" alt="" class="catalog__icon">
                         </div>
                         <div class="catalog__name">Средства дезинфекции и гигиены</div>
                     </div>
-                </div>
-                <div class="catalog__col col col-4">
+                </a>
+                <a href="#" class="catalog__col col col-4" data-category="catagory__five">
                     <div class="catalog__item d-flex">
-                        <div class="catalog__square">
-                            <img src="#" alt="" class="catalog__icon">
+                        <div class="catalog__square d-flex">
+                            <img src="img/catalog-icon_5.png" alt="" class="catalog__icon">
                         </div>
                         <div class="catalog__name">Средства дезинфекции и гигиены</div>
                     </div>
-                </div>
-                <div class="catalog__col col col-4">
+                </a>
+                <a href="#" class="catalog__col col col-4" data-category="catagory__six">
                     <div class="catalog__item d-flex">
-                        <div class="catalog__square">
-                            <img src="#" alt="" class="catalog__icon">
+                        <div class="catalog__square d-flex">
+                            <img src="img/catalog-icon_6.png" alt="" class="catalog__icon">
                         </div>
                         <div class="catalog__name">Средства дезинфекции и гигиены</div>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="catalog__info">
+            <div class="catalog__tabs tabs">
+                <div class="catalog__container container">
+                    <div class="tabs__nav d-flex">
+                        <button type="button" class="tabs__btn tabs__btn_active">Обработка кожных покровов</button>
+                        <button type="button" class="tabs__btn">Дезинфицирующие средства</button>
+                    </div>
+                </div>
+            </div>
+            <div class="catalog__body">
+                <div class="catalog__container container">
+                    <form action="#" class="goods__filter filter d-flex">
+                        <label for="#" class="filter__label">Фильтр</label>
+                        <div class="filter__grid d-flex">
+                            <div class="filter__group">
+                                <select class="form__element">
+                                    <option value="1">Назначение</option>
+                                </select>
+                            </div>
+                            <div class="filter__group">
+                                <select class="form__element">
+                                    <option value="1">Форм-фактор</option>
+                                </select>
+                            </div>
+                            <div class="filter__group">
+                                <select class="form__element">
+                                    <option value="1">Действующее активное вещество</option>
+                                </select>
+                            </div>
+                        </div>
+                    </form>
+                    <div class="catalog__goods goods d-flex wrap">
+                        <div class="goods__col col col-4">
+                            <div class="goods__item">
+                                <div class="goods__header d-flex">
+                                    <img src="img/goods__image_1.jpg" alt="Товар" class="goods__image">
+                                </div>
+                                <div class="goods__footer">
+                                    <p class="goods__name">Дозатора для антисептика</p>
+                                    <p class="goods__text">Сенсорный дозатор, рботает на батарейках, оснащен индкатором </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="goods__col col col-4">
+                            <div class="goods__item">
+                                <div class="goods__header d-flex">
+                                    <img src="img/goods__image_2.jpg" alt="Товар" class="goods__image">
+                                </div>
+                                <div class="goods__footer">
+                                    <p class="goods__name">Дозатора для антисептика</p>
+                                    <p class="goods__text">Сенсорный дозатор, рботает на батарейках, оснащен индкатором </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="goods__col col col-4">
+                            <div class="goods__item">
+                                <div class="goods__header d-flex">
+                                    <img src="img/goods__image_2.jpg" alt="Товар" class="goods__image">
+                                </div>
+                                <div class="goods__footer">
+                                    <p class="goods__name">Дозатора для антисептика</p>
+                                    <p class="goods__text">Сенсорный дозатор, рботает на батарейках, оснащен индкатором </p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -135,7 +204,7 @@
                         Политика конфиденциальности</p>
                 </div>
             </div>
-            <div class="footer__col col col-2">
+            <div class="footer__col col col-3">
                 <div class="footer__inner">
                     <h3 class="footer__title">Карта Сайта</h3>
                     <ul class="footer__menu menu">
@@ -180,31 +249,17 @@
                     </div>
                 </div>
             </div>
-            <div class="footer__col col col-3">
+            <div class="footer__col col col-2">
                 <div class="footer__inner">
                     <h3 class="footer__title">Режим работы</h3>
                     <ul class="footer__list list footer-list">
-                        <li class="footer-list__item">
-                            ПН 9.00 - 18.00
-                        </li>
-                        <li class="footer-list__item">
-                            ПН 9.00 - 18.00
-                        </li>
-                        <li class="footer-list__item">
-                            ПН 9.00 - 18.00
-                        </li>
-                        <li class="footer-list__item">
-                            ПН 9.00 - 18.00
-                        </li>
-                        <li class="footer-list__item">
-                            ПН 9.00 - 18.00
-                        </li>
-                        <li class="footer-list__item">
-                            СБ - выходной
-                        </li>
-                        <li class="footer-list__item">
-                            ВС - выходной
-                        </li>
+                        <li class="footer-list__item">ПН 9.00 - 18.00</li>
+                        <li class="footer-list__item">ПН 9.00 - 18.00</li>
+                        <li class="footer-list__item">ПН 9.00 - 18.00</li>
+                        <li class="footer-list__item">ПН 9.00 - 18.00</li>
+                        <li class="footer-list__item">ПН 9.00 - 18.00</li>
+                        <li class="footer-list__item footer-list__item_circle-white">СБ - выходной</li>
+                        <li class="footer-list__item footer-list__item_circle-white">ВС - выходной</li>
                     </ul>
                 </div>
             </div>

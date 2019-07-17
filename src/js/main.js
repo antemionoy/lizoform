@@ -1,6 +1,8 @@
 //= ../../bower_components/jquery/dist/jquery.min.js
 //= ../../bower_components/owl.carousel/dist/owl.carousel.js
 //= ../../bower_components/magnific-popup/dist/jquery.magnific-popup.js
+//= ../../bower_components/fotorama/fotorama.js
+
 
 "use strict";
 
@@ -232,7 +234,6 @@ $(function() {
 
     owlCarouselSlider($('.s-gallery'));
     zoomPopUp('.s-gallery');
-    owlFunction('.card__carousel');
     dropdownMenuToggle();
     sidebarToggle();
 
@@ -253,6 +254,10 @@ $(function() {
         $('body,html').animate({
             scrollTop: 0
         }, 800);
+    });
+
+    $('.card__carousel').fotorama({
+        nav: 'thumbs'
     });
 
 
