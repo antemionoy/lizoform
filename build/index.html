@@ -48,7 +48,7 @@
                             <a href="#" class="header__number number number_icon-green">8-812-347-71-15</a>
                             <a href="#" class="header__mail mail mail_icon-green">inform@lysoform.ru</a>
                         </div>
-                        <a href="#" class="header__callback">Обратный звонок</a>
+                        <a href="#" class="header__callback" data-remodal-target="modal-callback">Обратный звонок</a>
                     </div>
                 </div>
             </div>
@@ -116,6 +116,9 @@
                     </div>
                 </div>
             </div>
+        </div>
+        <div class="container slider__nav d-flex">
+            <div class="slider__nav__line"></div>
         </div>
     </section>
     <section class="counts">
@@ -289,12 +292,22 @@
     <section class="certificates">
         <div class="container certificates__container">
             <h2 class="certificates__title title title_center title_h2">Сертификаты</h2>
-            <div class="certificates__slider d-flex">
-                <img src="img/sertificate_1.png" alt="Cертификат" class="certificates__image">
-                <img src="img/sertificate_1.png" alt="Cертификат" class="certificates__image">
-                <img src="img/sertificate_1.png" alt="Cертификат" class="certificates__image">
-                <img src="img/sertificate_1.png" alt="Cертификат" class="certificates__image">
-                <img src="img/sertificate_1.png" alt="Cертификат" class="certificates__image">
+            <div class="certificates__slider s-gallery d-flex">
+                <a href="img/sertificate_1.png" class="certificates__link">
+                    <img src="img/sertificate_1.png" alt="Cертификат" class="certificates__image">
+                </a>
+                <a href="img/sertificate_1.png" class="certificates__link">
+                    <img src="img/sertificate_1.png" alt="Cертификат" class="certificates__image">
+                </a>
+                <a href="img/sertificate_1.png" class="certificates__link">
+                    <img src="img/sertificate_1.png" alt="Cертификат" class="certificates__image">
+                </a>
+                <a href="img/sertificate_1.png" class="certificates__link">
+                    <img src="img/sertificate_1.png" alt="Cертификат" class="certificates__image">
+                </a>
+                <a href="img/sertificate_1.png" class="certificates__link">
+                    <img src="img/sertificate_1.png" alt="Cертификат" class="certificates__image">
+                </a>
             </div>
         </div>
     </section>
@@ -323,6 +336,12 @@
                         </div>
                         <div class="form__group form__group_large col ">
                             <textarea type="text" class="form__element form__textarea" placeholder="Ваш комментарий"></textarea>
+                        </div>
+                        <div class="form__group form__group_large col terms-conditions">
+                            <label for="license1">
+                                <input id="license1" type="checkbox" class="checkbox-template" checked="">
+                                <span> Я прочитал(а) и принимаю условия <a href="#" class="terms-conditions__link">пользовательского соглашения</a></span>
+                            </label>
                         </div>
                     </div>
                     <button type="submit" class="form__btn callback__btn btn">Отправить</button>
@@ -405,6 +424,42 @@
         </div>
     </div>
 </footer>
+<div class="remodal" data-remodal-id="modal-callback">
+    <div class="remodal__box-title">
+        <div class="remodal__title title title_h3">Заказать звонок</div>
+    </div>
+    <div class="contact-form">
+        <div class="form-complete">
+            <div class="form-complete__title title title_h3">Ваше сообщение отправлено</div>
+            <div class="form-complete__subtitle">
+                Ма свяжемся с Вами в ближайшее время
+            </div>
+            <a href="#" class="form-complete__button button">Cпасибо жду звонка</a>
+        </div>
+        <form action="#" class="remodal__form form form-ajax">
+            <div class="form__inner remodal__grid wrap d-flex">
+                <div class="form__group form__group_large сol">
+                    <input type="text" class="form__element" name="username" placeholder="Ваше ФИО" required>
+                </div>
+                <div class="form__group form__group_large сol">
+                    <input type="tel" class="form__element mask" name="phone" placeholder="Ваш телефон" required>
+                </div>
+            </div>
+            <div class="form-group col form__group_large terms-conditions">
+                <label for="license2">
+                    <input id="license2" type="checkbox" class="checkbox-template" checked="">
+                    <span> Я прочитал(а) и принимаю условия <a href="%content get_page_url(25)%" class="terms-conditions__link">пользовательского соглашения</a></span>
+                </label>
+            </div>
+            <div class="box-center">
+                <button class="remodal__btn header__callback">
+                   Заказать звонок
+                </button>
+            </div>
+        </form>
+    </div>
+    <button data-remodal-action="close" class="remodal-close"></button>
+</div>
 </div>
 <div class="arrow-up"></div>
 <script src="js/main.js"></script>

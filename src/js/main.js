@@ -2,77 +2,11 @@
 //= ../../bower_components/owl.carousel/dist/owl.carousel.js
 //= ../../bower_components/magnific-popup/dist/jquery.magnific-popup.js
 //= ../../bower_components/fotorama/fotorama.js
+//= ../../bower_components/remodal/dist/remodal.min.js
+
 
 
 "use strict";
-
-function owlCarouselSlider(owl) {
-
-    owl.owlCarousel({
-        loop: false,
-        margin: 20,
-        nav: true,
-        dots: false,
-        slideBy: 1,
-        items: 4,
-        center: false,
-        responsiveClass: true,
-        navContainer: ".slider__nav",
-        responsive: {
-
-            320: {
-                items: 1,
-                dots: true
-            },
-
-            480: {
-                items: 1,
-                dots: true
-            },
-
-            768: {
-                items: 2,
-                dots: true
-
-            },
-
-            1023: {
-                items: 4,
-                dots: false
-            }
-        }
-    });
-
-}
-
-function owlFunction(carousel) {
-
-    $(carousel).owlCarousel({
-        items: 1,
-        loop: false,
-        nav: true,
-        dots: true,
-        dotsContainer: ".c-dots .c-dots__row",
-        responsive: {
-            320: {
-                items: 1,
-            },
-
-            480: {
-                items: 1
-            },
-
-            768: {
-                items: 1
-            },
-
-            1023: {
-                items: 1
-            }
-        }
-    });
-}
-
 
 function zoomPopUp(item) {
     $(item).magnificPopup({
@@ -108,7 +42,6 @@ $('.certificates__slider').owlCarousel({
     items: 4,
     center: false,
     responsiveClass: true,
-    navContainer: ".slider__nav",
     responsive: {
 
         320: {
@@ -144,13 +77,13 @@ $('.promo__slider').owlCarousel({
     margin: 0,
     nav: false,
     dots: true,
-    dotsContainer: ".promo__dots",
     slideBy: 1,
     items: 1,
     autoplay: false,
     autoplayTimeout: 5000,
     center: false,
     responsiveClass: true,
+    navContainer: ".slider__nav",
     responsive: {
 
         320: {
@@ -191,51 +124,86 @@ function sidebarToggle() {
 }
 
 
-function dropdownMenuToggle() {
+function closeFormModal(itemClick, form) {
 
-    if ($(window).width() <= 1023) {
+    var inst = $('.remodal').remodal();
 
-        $('.menu__link, .dropdown__link').each(function(i) {
-            var item = i;
+    $(itemClick).click(function(e) {
+        e.preventDefault();
 
-            $(this).on('click', function(e) {
-                e.preventDefault();
-                $(this).siblings('.menu__dropdown').toggleClass('active');
-                $('.menu__link_dropdown').toggleClass('active');
-                $(this).siblings('.menu__category').toggleClass('active');
-                $(this).siblings('.menu__category').siblings('.dropdown__link').toggleClass('active');
+        if(inst){
+            inst.close();
+        }
+
+        if ($('.contact-form').parent().find('.remodal__box-title').length > 0) {
+            $('.contact-form').parent().find('.remodal__box-title').show();
+        }
+
+        $('.form-complete').hide();
+        $(form).show();
+
+
+        return false;
+
+    });
+}
+
+
+function formAjax(){
+
+
+    $(".form-ajax").submit(function(e) {
+        e.preventDefault();
+
+        var LongByteValidate = true;
+        var senderForm = this;
+
+        if (LongByteValidate) {
+
+            $.ajax({
+                type: "POST",
+                url: "../../sendemail.php",
+                data: $(senderForm).serializeArray()
+            }).done(function(result) {
+
+                console.log('done');
+
+                $(senderForm).find("input, textarea").val("");
+
+                if ($(senderForm).hasClass('form-ajax')) {
+                    $(senderForm)
+                        .hide()
+                        .siblings('.form-complete')
+                        .show();
+
+                    if ($('.contact-form').parent().find('.remodal__box-title').length > 0) {
+                        $('.contact-form').parent().find('.remodal__box-title').hide();
+                        console.log('hide');
+                    }
+
+                } else {
+                    $(senderForm)
+                        .closest('.contact-form')
+                        .hide()
+                        .siblings('.form-complete')
+                        .show();
+                }
             });
 
-        });
+        }
+        return false;
+    });
 
 
-        $('.menu__category_link-back').each(function() {
-            $(this).on('click', function(e) {
-                e.preventDefault();
-                // $(this).parents('.menu__item').find('.menu__link').removeClass('active');
-                $(this).parents('.dropdown').toggleClass('active');
-                $('.menu__link_dropdown').toggleClass('active');
-            });
-        });
+    closeFormModal('.form-complete .button', '.form-ajax');
 
-
-        $('.menu__category_link').on('click', function(e) {
-
-            e.preventDefault();
-
-            $(this).toggleClass('active');
-        });
-
-    }
 }
 
 
 $(function() {
 
-    owlCarouselSlider($('.s-gallery'));
+    formAjax();
     zoomPopUp('.s-gallery');
-    dropdownMenuToggle();
-    sidebarToggle();
 
     $(window).scroll(function() {
         if ($(this).scrollTop() != 0) {
@@ -256,9 +224,18 @@ $(function() {
         }, 800);
     });
 
-    $('.card__carousel').fotorama({
-        nav: 'thumbs'
+
+    var fotoramaBox = $('.card__carousel').fotorama({
+        nav: 'thumbs',
+        click:false,
+        arrows: true,
+        allowfullscreen:true
     });
 
+    // var fotorama = fotoramaBox.data('fotorama');
+
+    // $('.fotorama').click(function(){
+    //     fotorama.requestFullScreen();    
+    // });
 
 });

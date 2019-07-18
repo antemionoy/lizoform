@@ -48,7 +48,7 @@
                             <a href="#" class="header__number number number_icon-green">8-812-347-71-15</a>
                             <a href="#" class="header__mail mail mail_icon-green">inform@lysoform.ru</a>
                         </div>
-                        <a href="#" class="header__callback">Обратный звонок</a>
+                        <a href="#" class="header__callback" data-remodal-target="modal-callback">Обратный звонок</a>
                     </div>
                 </div>
             </div>
@@ -69,12 +69,13 @@
     </div>
     <section class="card">
         <div class="container card__container">
-            <h1 class="card__title title title_center title_h1">Названия товара</h1>
+            <h1 class="card__title title title_center title_h1">Названиe товара</h1>
             <div class="card__grid d-flex">
-                <div class="card__carousel">
-                    <img src="../img/card-image.png" alt="" class="card__image">
-                    <img src="../img/card-image.png" alt="" class="card__image">
-                    <img src="../img/card-image.png" alt="" class="card__image">
+                <div class="card__carousel" data-arrows="true" data-allowfullscreen="true" data-width="100%" data-maxheight="470" data-thumbwidth="70" data-thumbheight="70">
+                    <img src="../img/card-image_2.png" alt="Карточка товара" class="card__image">
+                    <img src="../img/card-image_2.png" alt="Карточка товара" class="card__image">
+                    <img src="../img/card-image_2.png" alt="Карточка товара" class="card__image">
+                    <img src="../img/card-image_2.png" alt="Карточка товара" class="card__image">
                 </div>
                 <div class="card__info">
                     <h3>Описание</h3>
@@ -196,6 +197,42 @@
         </div>
     </div>
 </footer>
+<div class="remodal" data-remodal-id="modal-callback">
+    <div class="remodal__box-title">
+        <div class="remodal__title title title_h3">Заказать звонок</div>
+    </div>
+    <div class="contact-form">
+        <div class="form-complete">
+            <div class="form-complete__title title title_h3">Ваше сообщение отправлено</div>
+            <div class="form-complete__subtitle">
+                Ма свяжемся с Вами в ближайшее время
+            </div>
+            <a href="#" class="form-complete__button button">Cпасибо жду звонка</a>
+        </div>
+        <form action="#" class="remodal__form form form-ajax">
+            <div class="form__inner remodal__grid wrap d-flex">
+                <div class="form__group form__group_large сol">
+                    <input type="text" class="form__element" name="username" placeholder="Ваше ФИО" required>
+                </div>
+                <div class="form__group form__group_large сol">
+                    <input type="tel" class="form__element mask" name="phone" placeholder="Ваш телефон" required>
+                </div>
+            </div>
+            <div class="form-group col form__group_large terms-conditions">
+                <label for="license2">
+                    <input id="license2" type="checkbox" class="checkbox-template" checked="">
+                    <span> Я прочитал(а) и принимаю условия <a href="%content get_page_url(25)%" class="terms-conditions__link">пользовательского соглашения</a></span>
+                </label>
+            </div>
+            <div class="box-center">
+                <button class="remodal__btn header__callback">
+                   Заказать звонок
+                </button>
+            </div>
+        </form>
+    </div>
+    <button data-remodal-action="close" class="remodal-close"></button>
+</div>
 </div>
 <div class="arrow-up"></div>
 <script src="js/main.js"></script>

@@ -63,6 +63,9 @@
                 </div>
             </div>
         </div>
+        <div class="container slider__nav d-flex">
+            <div class="slider__nav__line"></div>
+        </div>
     </section>
     <section class="counts">
         <div class="container counts__container">
@@ -235,12 +238,22 @@
     <section class="certificates">
         <div class="container certificates__container">
             <h2 class="certificates__title title title_center title_h2">Сертификаты</h2>
-            <div class="certificates__slider d-flex">
-                <img src="img/sertificate_1.png" alt="Cертификат" class="certificates__image">
-                <img src="img/sertificate_1.png" alt="Cертификат" class="certificates__image">
-                <img src="img/sertificate_1.png" alt="Cертификат" class="certificates__image">
-                <img src="img/sertificate_1.png" alt="Cертификат" class="certificates__image">
-                <img src="img/sertificate_1.png" alt="Cертификат" class="certificates__image">
+            <div class="certificates__slider s-gallery d-flex">
+                <a href="img/sertificate_1.png" class="certificates__link">
+                    <img src="img/sertificate_1.png" alt="Cертификат" class="certificates__image">
+                </a>
+                <a href="img/sertificate_1.png" class="certificates__link">
+                    <img src="img/sertificate_1.png" alt="Cертификат" class="certificates__image">
+                </a>
+                <a href="img/sertificate_1.png" class="certificates__link">
+                    <img src="img/sertificate_1.png" alt="Cертификат" class="certificates__image">
+                </a>
+                <a href="img/sertificate_1.png" class="certificates__link">
+                    <img src="img/sertificate_1.png" alt="Cертификат" class="certificates__image">
+                </a>
+                <a href="img/sertificate_1.png" class="certificates__link">
+                    <img src="img/sertificate_1.png" alt="Cертификат" class="certificates__image">
+                </a>
             </div>
         </div>
     </section>
@@ -269,6 +282,12 @@
                         </div>
                         <div class="form__group form__group_large col ">
                             <textarea type="text" class="form__element form__textarea" placeholder="Ваш комментарий"></textarea>
+                        </div>
+                        <div class="form__group form__group_large col terms-conditions">
+                            <label for="license1">
+                                <input id="license1" type="checkbox" class="checkbox-template" checked="">
+                                <span> Я прочитал(а) и принимаю условия <a href="#" class="terms-conditions__link">пользовательского соглашения</a></span>
+                            </label>
                         </div>
                     </div>
                     <button type="submit" class="form__btn callback__btn btn">Отправить</button>
