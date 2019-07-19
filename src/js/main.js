@@ -4,8 +4,6 @@
 //= ../../bower_components/fotorama/fotorama.js
 //= ../../bower_components/remodal/dist/remodal.min.js
 
-
-
 "use strict";
 
 function zoomPopUp(item) {
@@ -131,7 +129,7 @@ function closeFormModal(itemClick, form) {
     $(itemClick).click(function(e) {
         e.preventDefault();
 
-        if(inst){
+        if (inst) {
             inst.close();
         }
 
@@ -149,7 +147,7 @@ function closeFormModal(itemClick, form) {
 }
 
 
-function formAjax(){
+function formAjax() {
 
 
     $(".form-ajax").submit(function(e) {
@@ -199,13 +197,148 @@ function formAjax(){
 
 }
 
+function selectFun() {
+
+    $('.form__select').each(function() {
+        var $this = $(this),
+            numberOfOptions = $(this).children('option').length;
+
+        $this.addClass('select-hidden');
+        $this.wrap('<div class="select"></div>');
+        $this.after('<div class="select-styled"></div>');
+
+        var $styledSelect = $this.next('div.select-styled');
+        $styledSelect.text($this.children('option').eq(0).text());
+
+        var $list = $('<ul />', {
+            'class': 'select-options'
+        }).insertAfter($styledSelect);
+
+        for (var i = 0; i < numberOfOptions; i++) {
+            $('<li />', {
+                text: $this.children('option').eq(i).text(),
+                rel: $this.children('option').eq(i).val()
+            }).appendTo($list);
+        }
+
+        var $listItems = $list.children('li');
+
+        $styledSelect.click(function(e) {
+            e.stopPropagation();
+            $('div.select-styled.active').not(this).each(function() {
+                $(this).removeClass('active').next('ul.select-options').hide();
+            });
+            $(this).toggleClass('active').next('ul.select-options').toggle();
+        });
+
+        $listItems.click(function(e) {
+            e.stopPropagation();
+            $styledSelect.text($(this).text()).removeClass('active');
+            $this.val($(this).attr('rel'));
+            $list.hide();
+            //console.log($this.val());
+        });
+
+        $(document).click(function() {
+            $styledSelect.removeClass('active');
+            $list.hide();
+        });
+
+    });
+
+}
+
+function changeCheckbox(checkbox, btn) {
+    var elementCheckbox = $(checkbox);
+    var elementBtn = $(btn);
+
+    elementCheckbox.click(function() {
+        if ($(this).is(':checked')) {
+            $(this).parents('form').find(elementBtn).removeClass('btn_disabled');
+        } else {
+            $(this).parents('form').find(elementBtn).addClass('btn_disabled');
+        }
+    });
+}
+
+
+function catalogChange() {
+
+    var tabTriggerBtns = document.querySelectorAll('.catalog__col');
+
+    tabTriggerBtns.forEach(function(tabTriggerBtn, index) {
+
+        tabTriggerBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+
+            var currentTabData = document.querySelector('.catalog__info[data-tab-content="' + this.dataset.tabCategory + '"]');
+
+            console.log(this.dataset.tabCategory);
+
+            if(currentTabData){
+                // remove classess
+                document.querySelector('.catalog__info.is-open').classList.remove('is-open');
+                document.querySelector('.catalog__col.is-active').classList.remove('is-active');
+                // add classes
+                currentTabData.classList.add('is-open');
+                this.classList.add('is-active');
+            }
+
+         
+        });
+    });
+
+
+    var tabTrigger = document.querySelectorAll('.tabs__btn');
+
+    tabTrigger.forEach(function(tabTrigger, index) {
+
+        tabTrigger.addEventListener('click', function(e) {
+            e.preventDefault();
+
+            var currentTab = document.querySelector('.catalog__section[data-tab-content="' + this.dataset.tabCategory + '"]');
+
+            console.log(this.dataset.tabCategory);
+
+            if(currentTab){
+                // remove classess
+                document.querySelector('.catalog__section.is-open').classList.remove('is-open');
+                document.querySelector('.tabs__btn.tabs__btn_active').classList.remove('tabs__btn_active');
+                // add classes
+                currentTab.classList.add('is-open');
+                this.classList.add('tabs__btn_active');
+            }
+
+         
+        });
+    });
+
+}
+
 
 $(function() {
 
+    catalogChange();
+
+    changeCheckbox('.terms-conditions input', '.form__btn');
+
+    changeCheckbox('.terms-conditions input', '.remodal__btn');
+
+    selectFun();
+
     formAjax();
+
     zoomPopUp('.s-gallery');
 
+    var fotoramaBox = $('.card__carousel').fotorama({
+        nav: 'thumbs',
+        click: false,
+        arrows: true,
+        allowfullscreen: true
+    });
+
     $(window).scroll(function() {
+
         if ($(this).scrollTop() != 0) {
             $('.arrow-up').fadeIn();
         } else {
@@ -223,19 +356,5 @@ $(function() {
             scrollTop: 0
         }, 800);
     });
-
-
-    var fotoramaBox = $('.card__carousel').fotorama({
-        nav: 'thumbs',
-        click:false,
-        arrows: true,
-        allowfullscreen:true
-    });
-
-    // var fotorama = fotoramaBox.data('fotorama');
-
-    // $('.fotorama').click(function(){
-    //     fotorama.requestFullScreen();    
-    // });
 
 });

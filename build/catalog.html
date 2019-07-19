@@ -71,57 +71,285 @@
         <div class="container catalog__container">
             <h1 class="catalog__title title title_h1">Каталог</h1>
             <div class="catalog__grid wrap d-flex">
-                <a href="#" class="catalog__col col col-4" data-category="catagory__one">
-                    <div class="catalog__item d-flex">
-                        <div class="catalog__square d-flex">
-                            <img src="img/catalog-icon_1.png" alt="" class="catalog__icon">
+                <a href="#" class="catalog__col col col-4 is-active" data-tab-category="1">
+                    <div class="catalog__border">
+                        <div class="catalog__item d-flex">
+                            <div class="catalog__square d-flex">
+                                <img src="img/catalog-icon_1.png" alt="" class="catalog__icon">
+                            </div>
+                            <div class="catalog__name">Средства дезинфекции и гигиены</div>
                         </div>
-                        <div class="catalog__name">Средства дезинфекции и гигиены</div>
                     </div>
                 </a>
-                <a href="#" class="catalog__col col col-4" data-category="catagory__two">
-                    <div class="catalog__item d-flex">
-                        <div class="catalog__square d-flex">
-                            <img src="img/catalog-icon_2.png" alt="" class="catalog__icon">
+                <a href="#" class="catalog__col col col-4" data-tab-category="2">
+                    <div class="catalog__border">
+                        <div class="catalog__item d-flex">
+                            <div class="catalog__square d-flex">
+                                <img src="img/catalog-icon_2.png" alt="" class="catalog__icon">
+                            </div>
+                            <div class="catalog__name">Средства дезинфекции и гигиены</div>
                         </div>
-                        <div class="catalog__name">Средства дезинфекции и гигиены</div>
                     </div>
                 </a>
-                <a href="#" class="catalog__col col col-4" data-category="catagory__three">
-                    <div class="catalog__item d-flex">
-                        <div class="catalog__square d-flex">
-                            <img src="img/catalog-icon_3.png" alt="" class="catalog__icon">
+                <a href="#" class="catalog__col col col-4" data-tab-category="3">
+                    <div class="catalog__border">
+                        <div class="catalog__item d-flex">
+                            <div class="catalog__square d-flex">
+                                <img src="img/catalog-icon_3.png" alt="" class="catalog__icon">
+                            </div>
+                            <div class="catalog__name">Средства дезинфекции и гигиены</div>
                         </div>
-                        <div class="catalog__name">Средства дезинфекции и гигиены</div>
                     </div>
                 </a>
-                <a href="#" class="catalog__col col col-4" data-category="catagory__four">
-                    <div class="catalog__item d-flex">
-                        <div class="catalog__square d-flex">
-                            <img src="img/catalog-icon_4.png" alt="" class="catalog__icon">
+                <a href="#" class="catalog__col col col-4" data-tab-category="4">
+                    <div class="catalog__border">
+                        <div class="catalog__item d-flex">
+                            <div class="catalog__square d-flex">
+                                <img src="img/catalog-icon_4.png" alt="" class="catalog__icon">
+                            </div>
+                            <div class="catalog__name">Средства дезинфекции и гигиены</div>
                         </div>
-                        <div class="catalog__name">Средства дезинфекции и гигиены</div>
                     </div>
                 </a>
-                <a href="#" class="catalog__col col col-4" data-category="catagory__five">
-                    <div class="catalog__item d-flex">
-                        <div class="catalog__square d-flex">
-                            <img src="img/catalog-icon_5.png" alt="" class="catalog__icon">
+                <a href="#" class="catalog__col col col-4" data-tab-category="5">
+                    <div class="catalog__border">
+                        <div class="catalog__item d-flex">
+                            <div class="catalog__square d-flex">
+                                <img src="img/catalog-icon_5.png" alt="" class="catalog__icon">
+                            </div>
+                            <div class="catalog__name">Средства дезинфекции и гигиены</div>
                         </div>
-                        <div class="catalog__name">Средства дезинфекции и гигиены</div>
                     </div>
                 </a>
-                <a href="#" class="catalog__col col col-4" data-category="catagory__six">
-                    <div class="catalog__item d-flex">
-                        <div class="catalog__square d-flex">
-                            <img src="img/catalog-icon_6.png" alt="" class="catalog__icon">
+                <a href="#" class="catalog__col col col-4" data-tab-category="6">
+                    <div class="catalog__border">
+                        <div class="catalog__item d-flex">
+                            <div class="catalog__square d-flex">
+                                <img src="img/catalog-icon_6.png" alt="" class="catalog__icon">
+                            </div>
+                            <div class="catalog__name">Средства дезинфекции и гигиены</div>
                         </div>
-                        <div class="catalog__name">Средства дезинфекции и гигиены</div>
                     </div>
                 </a>
             </div>
         </div>
-        <div class="catalog__info">
+        <div class="catalog__info is-open" data-tab-content="1">
+            <div class="catalog__tabs tabs">
+                <div class="catalog__container container">
+                    <div class="tabs__nav wrap d-flex">
+                        <button type="button" class="tabs__btn tabs__btn_active" data-tab-category="1">Обработка кожных покровов</button>
+                        <button type="button" class="tabs__btn" data-tab-category="2">Дезинфицирующие средства</button>
+                    </div>
+                </div>
+            </div>
+            <div class="catalog__body">
+                <div class="catalog__container container">
+                    <form action="#" class="goods__filter filter d-flex">
+                        <label for="#" class="filter__label">Фильтр</label>
+                        <div class="filter__grid d-flex">
+                            <div class="filter__group">
+                                <select class="form__element form__select">
+                                    <option value="1">Назначение</option>
+                                </select>
+                            </div>
+                            <div class="filter__group">
+                                <select class="form__element form__select">
+                                    <option value="1">Форм-фактор</option>
+                                </select>
+                            </div>
+                            <div class="filter__group">
+                                <select class="form__element form__select">
+                                    <option value="1">Действующее активное вещество</option>
+                                </select>
+                            </div>
+                        </div>
+                    </form>
+                    <div class="catalog__section is-open" data-tab-content="1">
+                        <div class="catalog__goods goods d-flex wrap">
+                            <a href="#" class="goods__col col col-4">
+                                <div class="goods__item">
+                                    <div class="goods__header d-flex">
+                                        <img src="img/goods__image_1.jpg" alt="Товар" class="goods__image">
+                                    </div>
+                                    <div class="goods__footer">
+                                        <p class="goods__name">Дозатора для антисептика</p>
+                                        <p class="goods__text">Сенсорный дозатор, рботает на батарейках, оснащен индкатором </p>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="#" class="goods__col col col-4">
+                                <div class="goods__item">
+                                    <div class="goods__header d-flex">
+                                        <img src="img/goods__image_2.jpg" alt="Товар" class="goods__image">
+                                    </div>
+                                    <div class="goods__footer">
+                                        <p class="goods__name">Дозатора для антисептика</p>
+                                        <p class="goods__text">Сенсорный дозатор, рботает на батарейках, оснащен индкатором </p>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="#" class="goods__col col col-4">
+                                <div class="goods__item">
+                                    <div class="goods__header d-flex">
+                                        <img src="img/goods__image_2.jpg" alt="Товар" class="goods__image">
+                                    </div>
+                                    <div class="goods__footer">
+                                        <p class="goods__name">Дозатора для антисептика</p>
+                                        <p class="goods__text">Сенсорный дозатор, рботает на батарейках, оснащен индкатором </p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="catalog__section" data-tab-content="2">
+                        <div class="catalog__goods goods d-flex wrap">
+                            <a href="#" class="goods__col col col-4">
+                                <div class="goods__item">
+                                    <div class="goods__header d-flex">
+                                        <img src="img/goods__image_1.jpg" alt="Товар" class="goods__image">
+                                    </div>
+                                    <div class="goods__footer">
+                                        <p class="goods__name">Дозатора для антисептика</p>
+                                        <p class="goods__text">Сенсорный дозатор, рботает на батарейках, оснащен индкатором </p>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="#" class="goods__col col col-4">
+                                <div class="goods__item">
+                                    <div class="goods__header d-flex">
+                                        <img src="img/goods__image_2.jpg" alt="Товар" class="goods__image">
+                                    </div>
+                                    <div class="goods__footer">
+                                        <p class="goods__name">Дозатора для антисептика</p>
+                                        <p class="goods__text">Сенсорный дозатор, рботает на батарейках, оснащен индкатором </p>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="#" class="goods__col col col-4">
+                                <div class="goods__item">
+                                    <div class="goods__header d-flex">
+                                        <img src="img/goods__image_2.jpg" alt="Товар" class="goods__image">
+                                    </div>
+                                    <div class="goods__footer">
+                                        <p class="goods__name">Дозатора для антисептика</p>
+                                        <p class="goods__text">Сенсорный дозатор, рботает на батарейках, оснащен индкатором </p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="catalog__info" data-tab-content="2">
+            <div class="catalog__tabs tabs">
+                <div class="catalog__container container">
+                    <div class="tabs__nav d-flex">
+                        <button type="button" class="tabs__btn tabs__btn_active" data-tab-category="1">Обработка кожных покровов</button>
+                        <button type="button" class="tabs__btn" data-tab-category="2">Дезинфицирующие средства</button>
+                    </div>
+                </div>
+            </div>
+            <div class="catalog__body">
+                <div class="catalog__container container">
+                    <form action="#" class="goods__filter filter d-flex">
+                        <label for="#" class="filter__label">Фильтр</label>
+                        <div class="filter__grid d-flex">
+                            <div class="filter__group">
+                                <select class="form__element form__select">
+                                    <option value="1">Назначение</option>
+                                </select>
+                            </div>
+                            <div class="filter__group">
+                                <select class="form__element form__select">
+                                    <option value="1">Форм-фактор</option>
+                                </select>
+                            </div>
+                            <div class="filter__group">
+                                <select class="form__element form__select">
+                                    <option value="1">Действующее активное вещество</option>
+                                </select>
+                            </div>
+                        </div>
+                    </form>
+                    <div class="catalog__section is-open" data-tab-content="1">
+                        <div class="catalog__goods goods d-flex wrap">
+                            <a href="#" class="goods__col col col-4">
+                                <div class="goods__item">
+                                    <div class="goods__header d-flex">
+                                        <img src="img/goods__image_1.jpg" alt="Товар" class="goods__image">
+                                    </div>
+                                    <div class="goods__footer">
+                                        <p class="goods__name">Дозатора для антисептика</p>
+                                        <p class="goods__text">Сенсорный дозатор, рботает на батарейках, оснащен индкатором </p>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="#" class="goods__col col col-4">
+                                <div class="goods__item">
+                                    <div class="goods__header d-flex">
+                                        <img src="img/goods__image_2.jpg" alt="Товар" class="goods__image">
+                                    </div>
+                                    <div class="goods__footer">
+                                        <p class="goods__name">Дозатора для антисептика</p>
+                                        <p class="goods__text">Сенсорный дозатор, рботает на батарейках, оснащен индкатором </p>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="#" class="goods__col col col-4">
+                                <div class="goods__item">
+                                    <div class="goods__header d-flex">
+                                        <img src="img/goods__image_2.jpg" alt="Товар" class="goods__image">
+                                    </div>
+                                    <div class="goods__footer">
+                                        <p class="goods__name">Дозатора для антисептика</p>
+                                        <p class="goods__text">Сенсорный дозатор, рботает на батарейках, оснащен индкатором </p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="catalog__section" data-tab-content="2">
+                        <div class="catalog__goods goods d-flex wrap">
+                            <a href="#" class="goods__col col col-4">
+                                <div class="goods__item">
+                                    <div class="goods__header d-flex">
+                                        <img src="img/goods__image_1.jpg" alt="Товар" class="goods__image">
+                                    </div>
+                                    <div class="goods__footer">
+                                        <p class="goods__name">Дозатора для антисептика</p>
+                                        <p class="goods__text">Сенсорный дозатор, рботает на батарейках, оснащен индкатором </p>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="#" class="goods__col col col-4">
+                                <div class="goods__item">
+                                    <div class="goods__header d-flex">
+                                        <img src="img/goods__image_2.jpg" alt="Товар" class="goods__image">
+                                    </div>
+                                    <div class="goods__footer">
+                                        <p class="goods__name">Дозатора для антисептика</p>
+                                        <p class="goods__text">Сенсорный дозатор, рботает на батарейках, оснащен индкатором </p>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="#" class="goods__col col col-4">
+                                <div class="goods__item">
+                                    <div class="goods__header d-flex">
+                                        <img src="img/goods__image_2.jpg" alt="Товар" class="goods__image">
+                                    </div>
+                                    <div class="goods__footer">
+                                        <p class="goods__name">Дозатора для антисептика</p>
+                                        <p class="goods__text">Сенсорный дозатор, рботает на батарейках, оснащен индкатором </p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="catalog__info" data-tab-content="3">
             <div class="catalog__tabs tabs">
                 <div class="catalog__container container">
                     <div class="tabs__nav d-flex">
@@ -136,55 +364,310 @@
                         <label for="#" class="filter__label">Фильтр</label>
                         <div class="filter__grid d-flex">
                             <div class="filter__group">
-                                <select class="form__element">
+                                <select class="form__element form__select">
                                     <option value="1">Назначение</option>
                                 </select>
                             </div>
                             <div class="filter__group">
-                                <select class="form__element">
+                                <select class="form__element form__select">
                                     <option value="1">Форм-фактор</option>
                                 </select>
                             </div>
                             <div class="filter__group">
-                                <select class="form__element">
+                                <select class="form__element form__select">
                                     <option value="1">Действующее активное вещество</option>
                                 </select>
                             </div>
                         </div>
                     </form>
-                    <div class="catalog__goods goods d-flex wrap">
-                        <div class="goods__col col col-4">
-                            <div class="goods__item">
-                                <div class="goods__header d-flex">
-                                    <img src="img/goods__image_1.jpg" alt="Товар" class="goods__image">
+                    <div class="catalog__section is-open" data-tab-content="1">
+                        <div class="catalog__goods goods d-flex wrap">
+                            <a href="#" class="goods__col col col-4">
+                                <div class="goods__item">
+                                    <div class="goods__header d-flex">
+                                        <img src="img/goods__image_1.jpg" alt="Товар" class="goods__image">
+                                    </div>
+                                    <div class="goods__footer">
+                                        <p class="goods__name">Дозатора для антисептика</p>
+                                        <p class="goods__text">Сенсорный дозатор, рботает на батарейках, оснащен индкатором </p>
+                                    </div>
                                 </div>
-                                <div class="goods__footer">
-                                    <p class="goods__name">Дозатора для антисептика</p>
-                                    <p class="goods__text">Сенсорный дозатор, рботает на батарейках, оснащен индкатором </p>
+                            </a>
+                            <a href="#" class="goods__col col col-4">
+                                <div class="goods__item">
+                                    <div class="goods__header d-flex">
+                                        <img src="img/goods__image_2.jpg" alt="Товар" class="goods__image">
+                                    </div>
+                                    <div class="goods__footer">
+                                        <p class="goods__name">Дозатора для антисептика</p>
+                                        <p class="goods__text">Сенсорный дозатор, рботает на батарейках, оснащен индкатором </p>
+                                    </div>
                                 </div>
+                            </a>
+                            <a href="#" class="goods__col col col-4">
+                                <div class="goods__item">
+                                    <div class="goods__header d-flex">
+                                        <img src="img/goods__image_2.jpg" alt="Товар" class="goods__image">
+                                    </div>
+                                    <div class="goods__footer">
+                                        <p class="goods__name">Дозатора для антисептика</p>
+                                        <p class="goods__text">Сенсорный дозатор, рботает на батарейках, оснащен индкатором </p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="catalog__section" data-tab-content="2">
+                        <div class="catalog__goods goods d-flex wrap">
+                            <a href="#" class="goods__col col col-4">
+                                <div class="goods__item">
+                                    <div class="goods__header d-flex">
+                                        <img src="img/goods__image_1.jpg" alt="Товар" class="goods__image">
+                                    </div>
+                                    <div class="goods__footer">
+                                        <p class="goods__name">Дозатора для антисептика</p>
+                                        <p class="goods__text">Сенсорный дозатор, рботает на батарейках, оснащен индкатором </p>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="#" class="goods__col col col-4">
+                                <div class="goods__item">
+                                    <div class="goods__header d-flex">
+                                        <img src="img/goods__image_2.jpg" alt="Товар" class="goods__image">
+                                    </div>
+                                    <div class="goods__footer">
+                                        <p class="goods__name">Дозатора для антисептика</p>
+                                        <p class="goods__text">Сенсорный дозатор, рботает на батарейках, оснащен индкатором </p>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="#" class="goods__col col col-4">
+                                <div class="goods__item">
+                                    <div class="goods__header d-flex">
+                                        <img src="img/goods__image_2.jpg" alt="Товар" class="goods__image">
+                                    </div>
+                                    <div class="goods__footer">
+                                        <p class="goods__name">Дозатора для антисептика</p>
+                                        <p class="goods__text">Сенсорный дозатор, рботает на батарейках, оснащен индкатором </p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="catalog__info" data-tab-content="4">
+            <div class="catalog__tabs tabs">
+                <div class="catalog__container container">
+                    <div class="tabs__nav d-flex">
+                        <button type="button" class="tabs__btn tabs__btn_active">Обработка кожных покровов</button>
+                        <button type="button" class="tabs__btn">Дезинфицирующие средства</button>
+                    </div>
+                </div>
+            </div>
+            <div class="catalog__body">
+                <div class="catalog__container container">
+                    <form action="#" class="goods__filter filter d-flex">
+                        <label for="#" class="filter__label">Фильтр</label>
+                        <div class="filter__grid d-flex">
+                            <div class="filter__group">
+                                <select class="form__element form__select">
+                                    <option value="1">Назначение</option>
+                                </select>
+                            </div>
+                            <div class="filter__group">
+                                <select class="form__element form__select">
+                                    <option value="1">Форм-фактор</option>
+                                </select>
+                            </div>
+                            <div class="filter__group">
+                                <select class="form__element form__select">
+                                    <option value="1">Действующее активное вещество</option>
+                                </select>
                             </div>
                         </div>
-                        <div class="goods__col col col-4">
-                            <div class="goods__item">
-                                <div class="goods__header d-flex">
-                                    <img src="img/goods__image_2.jpg" alt="Товар" class="goods__image">
+                    </form>
+                    <div class="catalog__section is-open" data-tab-content="1">
+                        <div class="catalog__goods goods d-flex wrap">
+                            <a href="#" class="goods__col col col-4">
+                                <div class="goods__item">
+                                    <div class="goods__header d-flex">
+                                        <img src="img/goods__image_1.jpg" alt="Товар" class="goods__image">
+                                    </div>
+                                    <div class="goods__footer">
+                                        <p class="goods__name">Дозатора для антисептика</p>
+                                        <p class="goods__text">Сенсорный дозатор, рботает на батарейках, оснащен индкатором </p>
+                                    </div>
                                 </div>
-                                <div class="goods__footer">
-                                    <p class="goods__name">Дозатора для антисептика</p>
-                                    <p class="goods__text">Сенсорный дозатор, рботает на батарейках, оснащен индкатором </p>
+                            </a>
+                            <a href="#" class="goods__col col col-4">
+                                <div class="goods__item">
+                                    <div class="goods__header d-flex">
+                                        <img src="img/goods__image_2.jpg" alt="Товар" class="goods__image">
+                                    </div>
+                                    <div class="goods__footer">
+                                        <p class="goods__name">Дозатора для антисептика</p>
+                                        <p class="goods__text">Сенсорный дозатор, рботает на батарейках, оснащен индкатором </p>
+                                    </div>
                                 </div>
+                            </a>
+                            <a href="#" class="goods__col col col-4">
+                                <div class="goods__item">
+                                    <div class="goods__header d-flex">
+                                        <img src="img/goods__image_2.jpg" alt="Товар" class="goods__image">
+                                    </div>
+                                    <div class="goods__footer">
+                                        <p class="goods__name">Дозатора для антисептика</p>
+                                        <p class="goods__text">Сенсорный дозатор, рботает на батарейках, оснащен индкатором </p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="catalog__section" data-tab-content="2">
+                        <div class="catalog__goods goods d-flex wrap">
+                            <a href="#" class="goods__col col col-4">
+                                <div class="goods__item">
+                                    <div class="goods__header d-flex">
+                                        <img src="img/goods__image_1.jpg" alt="Товар" class="goods__image">
+                                    </div>
+                                    <div class="goods__footer">
+                                        <p class="goods__name">Дозатора для антисептика</p>
+                                        <p class="goods__text">Сенсорный дозатор, рботает на батарейках, оснащен индкатором </p>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="#" class="goods__col col col-4">
+                                <div class="goods__item">
+                                    <div class="goods__header d-flex">
+                                        <img src="img/goods__image_2.jpg" alt="Товар" class="goods__image">
+                                    </div>
+                                    <div class="goods__footer">
+                                        <p class="goods__name">Дозатора для антисептика</p>
+                                        <p class="goods__text">Сенсорный дозатор, рботает на батарейках, оснащен индкатором </p>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="#" class="goods__col col col-4">
+                                <div class="goods__item">
+                                    <div class="goods__header d-flex">
+                                        <img src="img/goods__image_2.jpg" alt="Товар" class="goods__image">
+                                    </div>
+                                    <div class="goods__footer">
+                                        <p class="goods__name">Дозатора для антисептика</p>
+                                        <p class="goods__text">Сенсорный дозатор, рботает на батарейках, оснащен индкатором </p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="catalog__info" data-tab-content="5">
+            <div class="catalog__tabs tabs">
+                <div class="catalog__container container">
+                    <div class="tabs__nav d-flex">
+                        <button type="button" class="tabs__btn tabs__btn_active">Обработка кожных покровов</button>
+                        <button type="button" class="tabs__btn">Дезинфицирующие средства</button>
+                    </div>
+                </div>
+            </div>
+            <div class="catalog__body">
+                <div class="catalog__container container">
+                    <form action="#" class="goods__filter filter d-flex">
+                        <label for="#" class="filter__label">Фильтр</label>
+                        <div class="filter__grid d-flex">
+                            <div class="filter__group">
+                                <select class="form__element form__select">
+                                    <option value="1">Назначение</option>
+                                </select>
+                            </div>
+                            <div class="filter__group">
+                                <select class="form__element form__select">
+                                    <option value="1">Форм-фактор</option>
+                                </select>
+                            </div>
+                            <div class="filter__group">
+                                <select class="form__element form__select">
+                                    <option value="1">Действующее активное вещество</option>
+                                </select>
                             </div>
                         </div>
-                        <div class="goods__col col col-4">
-                            <div class="goods__item">
-                                <div class="goods__header d-flex">
-                                    <img src="img/goods__image_2.jpg" alt="Товар" class="goods__image">
+                    </form>
+                    <div class="catalog__section is-open" data-tab-content="1">
+                        <div class="catalog__goods goods d-flex wrap">
+                            <a href="#" class="goods__col col col-4">
+                                <div class="goods__item">
+                                    <div class="goods__header d-flex">
+                                        <img src="img/goods__image_1.jpg" alt="Товар" class="goods__image">
+                                    </div>
+                                    <div class="goods__footer">
+                                        <p class="goods__name">Дозатора для антисептика</p>
+                                        <p class="goods__text">Сенсорный дозатор, рботает на батарейках, оснащен индкатором </p>
+                                    </div>
                                 </div>
-                                <div class="goods__footer">
-                                    <p class="goods__name">Дозатора для антисептика</p>
-                                    <p class="goods__text">Сенсорный дозатор, рботает на батарейках, оснащен индкатором </p>
+                            </a>
+                            <a href="#" class="goods__col col col-4">
+                                <div class="goods__item">
+                                    <div class="goods__header d-flex">
+                                        <img src="img/goods__image_2.jpg" alt="Товар" class="goods__image">
+                                    </div>
+                                    <div class="goods__footer">
+                                        <p class="goods__name">Дозатора для антисептика</p>
+                                        <p class="goods__text">Сенсорный дозатор, рботает на батарейках, оснащен индкатором </p>
+                                    </div>
                                 </div>
-                            </div>
+                            </a>
+                            <a href="#" class="goods__col col col-4">
+                                <div class="goods__item">
+                                    <div class="goods__header d-flex">
+                                        <img src="img/goods__image_2.jpg" alt="Товар" class="goods__image">
+                                    </div>
+                                    <div class="goods__footer">
+                                        <p class="goods__name">Дозатора для антисептика</p>
+                                        <p class="goods__text">Сенсорный дозатор, рботает на батарейках, оснащен индкатором </p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="catalog__section" data-tab-content="2">
+                        <div class="catalog__goods goods d-flex wrap">
+                            <a href="#" class="goods__col col col-4">
+                                <div class="goods__item">
+                                    <div class="goods__header d-flex">
+                                        <img src="img/goods__image_1.jpg" alt="Товар" class="goods__image">
+                                    </div>
+                                    <div class="goods__footer">
+                                        <p class="goods__name">Дозатора для антисептика</p>
+                                        <p class="goods__text">Сенсорный дозатор, рботает на батарейках, оснащен индкатором </p>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="#" class="goods__col col col-4">
+                                <div class="goods__item">
+                                    <div class="goods__header d-flex">
+                                        <img src="img/goods__image_2.jpg" alt="Товар" class="goods__image">
+                                    </div>
+                                    <div class="goods__footer">
+                                        <p class="goods__name">Дозатора для антисептика</p>
+                                        <p class="goods__text">Сенсорный дозатор, рботает на батарейках, оснащен индкатором </p>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="#" class="goods__col col col-4">
+                                <div class="goods__item">
+                                    <div class="goods__header d-flex">
+                                        <img src="img/goods__image_2.jpg" alt="Товар" class="goods__image">
+                                    </div>
+                                    <div class="goods__footer">
+                                        <p class="goods__name">Дозатора для антисептика</p>
+                                        <p class="goods__text">Сенсорный дозатор, рботает на батарейках, оснащен индкатором </p>
+                                    </div>
+                                </div>
+                            </a>
                         </div>
                     </div>
                 </div>
