@@ -42,16 +42,16 @@
                 <h2 class="callback__title title title_h2 title_color-dark">У вас есть вопросы?</h2>
                 <p class="callback__text callback__text_color-dark">Заполните форму и напишите свой вопрос. Наши <br>
                     специалисты свяжутся с вами</p>
-                <form action="#" class="callback__form form">
+                <form action="#" class="callback__form form form-ajax">
                     <div class="form__grid wrap row d-flex">
                         <div class="form__group col">
-                            <input type="text" class="form__element form__input" placeholder="Ваше имя">
+                            <input type="text" class="form__element form__input" name="username" placeholder="Ваше имя" required>
                         </div>
                         <div class="form__group col">
-                            <input type="text" class="form__element form__input" placeholder="Ваш номер">
+                            <input type="text" class="form__element form__input mask" name="phone" placeholder="Ваш номер" required>
                         </div>
                         <div class="form__group col">
-                            <input type="text" class="form__element form__input" placeholder="Ваш e-mail">
+                            <input type="text" class="form__element form__input" name="email" placeholder="Ваш e-mail" required>
                         </div>
                         <div class="form__group col">
                             <select type="text" class="form__element form__select">
@@ -61,6 +61,12 @@
                         </div>
                         <div class="form__group form__group_large col ">
                             <textarea type="text" class="form__element form__textarea" placeholder="Ваш комментарий"></textarea>
+                        </div>
+                        <div class="form__group form__group_large col terms-conditions_black">
+                            <label for="license1">
+                                <input id="license1" type="checkbox" class="checkbox-template" checked="">
+                                <span> Я прочитал(а) и принимаю условия <a href="#" class="terms-conditions__link">пользовательского соглашения</a></span>
+                            </label>
                         </div>
                     </div>
                     <button type="submit" class="callback__btn btn">Отправить</button>

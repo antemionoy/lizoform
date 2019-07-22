@@ -42,6 +42,11 @@
                                 <a href="#" class="menu__link">Контакты</a>
                             </li>
                         </ul>
+                        <div class="header__contacts header__contacts_mobile d-flex">
+                            <a href="#" class="header__number number number_icon-green">8-812-347-71-15</a>
+                            <a href="#" class="header__mail mail mail_icon-green">inform@lysoform.ru</a>
+                            <a href="#" class="header__callback header__callback_mobile" data-remodal-target="modal-callback">Обратный звонок</a>
+                        </div>
                     </nav>
                     <div class="header__col d-flex">
                         <div class="header__contacts d-flex">
@@ -778,17 +783,22 @@
             <div class="form-group col form__group_large terms-conditions">
                 <label for="license2">
                     <input id="license2" type="checkbox" class="checkbox-template" checked="">
-                    <span> Я прочитал(а) и принимаю условия <a href="%content get_page_url(25)%" class="terms-conditions__link">пользовательского соглашения</a></span>
+                    <span> Я прочитал(а) и принимаю условия <a href="#" class="terms-conditions__link">пользовательского соглашения</a></span>
                 </label>
             </div>
             <div class="box-center">
                 <button class="remodal__btn header__callback">
-                   Заказать звонок
+                    Заказать звонок
                 </button>
             </div>
         </form>
     </div>
     <button data-remodal-action="close" class="remodal-close"></button>
+</div>
+<div class="remodal modal-form" data-remodal-id="modal-form">
+    <button data-remodal-action="close" class="remodal-close"></button>
+    <h2>Спасибо, ваше сообщение отправлено.</h2>
+    <p>Мы свяжемся с Вами в ближайшее время.</p>
 </div>
 </div>
 <div class="arrow-up"></div>

@@ -42,6 +42,11 @@
                                 <a href="#" class="menu__link">Контакты</a>
                             </li>
                         </ul>
+                        <div class="header__contacts header__contacts_mobile d-flex">
+                            <a href="#" class="header__number number number_icon-green">8-812-347-71-15</a>
+                            <a href="#" class="header__mail mail mail_icon-green">inform@lysoform.ru</a>
+                            <a href="#" class="header__callback header__callback_mobile" data-remodal-target="modal-callback">Обратный звонок</a>
+                        </div>
                     </nav>
                     <div class="header__col d-flex">
                         <div class="header__contacts d-flex">
@@ -101,16 +106,16 @@
                 <h2 class="callback__title title title_h2 title_color-dark">У вас есть вопросы?</h2>
                 <p class="callback__text callback__text_color-dark">Заполните форму и напишите свой вопрос. Наши <br>
                     специалисты свяжутся с вами</p>
-                <form action="#" class="callback__form form">
+                <form action="#" class="callback__form form form-ajax">
                     <div class="form__grid wrap row d-flex">
                         <div class="form__group col">
-                            <input type="text" class="form__element form__input" placeholder="Ваше имя">
+                            <input type="text" class="form__element form__input" name="username" placeholder="Ваше имя" required>
                         </div>
                         <div class="form__group col">
-                            <input type="text" class="form__element form__input" placeholder="Ваш номер">
+                            <input type="text" class="form__element form__input mask" name="phone" placeholder="Ваш номер" required>
                         </div>
                         <div class="form__group col">
-                            <input type="text" class="form__element form__input" placeholder="Ваш e-mail">
+                            <input type="text" class="form__element form__input" name="email" placeholder="Ваш e-mail" required>
                         </div>
                         <div class="form__group col">
                             <select type="text" class="form__element form__select">
@@ -120,6 +125,12 @@
                         </div>
                         <div class="form__group form__group_large col ">
                             <textarea type="text" class="form__element form__textarea" placeholder="Ваш комментарий"></textarea>
+                        </div>
+                        <div class="form__group form__group_large col terms-conditions_black">
+                            <label for="license1">
+                                <input id="license1" type="checkbox" class="checkbox-template" checked="">
+                                <span> Я прочитал(а) и принимаю условия <a href="#" class="terms-conditions__link">пользовательского соглашения</a></span>
+                            </label>
                         </div>
                     </div>
                     <button type="submit" class="callback__btn btn">Отправить</button>
@@ -226,17 +237,22 @@
             <div class="form-group col form__group_large terms-conditions">
                 <label for="license2">
                     <input id="license2" type="checkbox" class="checkbox-template" checked="">
-                    <span> Я прочитал(а) и принимаю условия <a href="%content get_page_url(25)%" class="terms-conditions__link">пользовательского соглашения</a></span>
+                    <span> Я прочитал(а) и принимаю условия <a href="#" class="terms-conditions__link">пользовательского соглашения</a></span>
                 </label>
             </div>
             <div class="box-center">
                 <button class="remodal__btn header__callback">
-                   Заказать звонок
+                    Заказать звонок
                 </button>
             </div>
         </form>
     </div>
     <button data-remodal-action="close" class="remodal-close"></button>
+</div>
+<div class="remodal modal-form" data-remodal-id="modal-form">
+    <button data-remodal-action="close" class="remodal-close"></button>
+    <h2>Спасибо, ваше сообщение отправлено.</h2>
+    <p>Мы свяжемся с Вами в ближайшее время.</p>
 </div>
 </div>
 <div class="arrow-up"></div>
