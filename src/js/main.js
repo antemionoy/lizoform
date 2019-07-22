@@ -284,7 +284,7 @@ function catalogChange() {
                 this.classList.add('is-active');
             }
 
-         
+
         });
     });
 
@@ -309,9 +309,23 @@ function catalogChange() {
                 this.classList.add('tabs__btn_active');
             }
 
-         
+
         });
     });
+
+}
+
+function sidebarToggle() {
+
+        $('.hamburger').on('click', function(e) {
+            e.preventDefault();
+
+            $(this).toggleClass("is-active");
+            $('.header__nav').toggleClass('is-visible');
+            $('.wrapper').toggleClass('open-sidebar');
+            $('html').toggleClass('overflow');
+
+        });
 
 }
 
@@ -329,6 +343,8 @@ $(function() {
     formAjax();
 
     zoomPopUp('.s-gallery');
+
+    sidebarToggle();
 
     var fotoramaBox = $('.card__carousel').fotorama({
         nav: 'thumbs',
